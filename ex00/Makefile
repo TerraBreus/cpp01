@@ -4,17 +4,19 @@ FLAGS = -Wall -Werror -Wextra -std=c++98
 
 SRC = \
 	  main.cpp \
-	  Zombie.cpp
+	  Zombie.cpp \
+	  newZombie.cpp \
+	  randomChump.cpp
 
 OBJ = $(SRC:%.cpp=%.o)
 
 all : $(NAME)
 
 $(NAME) : $(OBJ)
-	$(CPP) $(CFLAGS) $(OBJ) -o $(NAME)
+	$(CPP) $(FLAGS) $(OBJ) -o $(NAME)
 
-%.o : %.c
-	$(CPP) $(CPPFLAGS) -c $< -o $@
+%.o : %.cpp
+	$(CPP) $(FLAGS) -c $< -o $@
 
 clean :
 	rm -rf $(OBJ)
