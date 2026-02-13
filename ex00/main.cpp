@@ -22,5 +22,6 @@ int	main(void)
 	ptrZombie = newZombie("Foo");
 	ptrZombie->announce();
 	randomChump("Chump");
+	delete ptrZombie;
 	return (0);
 }
