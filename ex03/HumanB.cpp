@@ -13,5 +13,10 @@ void	HumanB::setWeapon(Weapon &weapon)
 
 void	HumanB::attack()
 {
-	std::cout << this->name << " attacks with their " << this->weapon->getType() << std::endl;
+	std::string	weaponToPrint;
+	if (weapon != NULL)
+		weaponToPrint = weapon->getType();
+	else
+		weaponToPrint = "bare hands";
+	std::cout << this->name << " attacks with their " << weaponToPrint << std::endl;
 }
