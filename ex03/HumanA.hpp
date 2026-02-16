@@ -1,5 +1,3 @@
-#include <string>
-
 #ifndef HUMAN_A_HPP
 # define HUMAN_A_HPP
 
@@ -9,8 +7,10 @@
 class	HumanA
 {
 	private:
-		Weapon		weapon;
+		Weapon		&weapon;
 		std::string	name;
 	public:
+		HumanA(std::string name, Weapon &weapon);
+		void	attack();
 };
 #endif
