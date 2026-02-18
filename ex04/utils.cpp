@@ -13,7 +13,7 @@ std::string	replaceString(std::string oldString, std::string s1, std::string s2)
 		return (oldString);
 	while (true)
 	{
-		j = oldString.find(s1, j);
+		j = oldString.find(s1, i);
 		if (j == std::string::npos)
 			break;
 		newString += oldString.substr(i, j - i);
