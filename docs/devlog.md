@@ -8,3 +8,6 @@ Also learned a bit with `references` and the difference in pointers. References 
 
 ## 16-02
 Using the references in functions. Used this already in CPP00 but useful to get in to more detail. Basically using references in your function calls allows you to use the actual variable instead of creating a copy, putting it on the stack for the duration of the function call and then deleting it the moment the function exits. It's basically a better way of using pointers since they can never be NULL.
+
+## 18-02
+AI tells me I shouldn't try to immitate the std::replace function so I am now copying the old string untill the first occurance of s1, then I put s2 in it and skip over s1 in the oldString. Then, when I can no longer find s1 in the old string I copy the rest of the old string in to the new string.
