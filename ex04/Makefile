@@ -1,9 +1,9 @@
 NAME = sedIsForLosers
 CPP = c++
-FLAGS = -Wall -Werror -Wextra -std=c++98 -g
+FLAGS = -Wall -Werror -Wextra -std=c++98
 
 SRC = main.cpp \
-	  replaceString.cpp
+	  utils.cpp
 OBJ = $(SRC:%.cpp=%.o)
 
 all : $(NAME)
