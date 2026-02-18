@@ -3,6 +3,9 @@
 #include <iostream>
 #include <string>
 
+
+std::string	replaceString(std::string oldString, std::string s1, std::string s2);
+
 int	sedIsForLosers(char *argv[])
 {
 	std::string			filename = argv[1];
@@ -17,19 +20,14 @@ int	sedIsForLosers(char *argv[])
 	std::string			inputString;
 	inputString = buffer.str();
 	std::cout << inputString;
-	//replace every instance of s1 to s2 in textFromFilename
-	size_t	pos = 0;
-	while ((pos = inputString.find(s1, pos)) != std::string::npos)
-	{
-		inputString.erase(pos, s1.length());
-		inputString.insert(pos, s2);
-		pos += s2.length();
-	}
-	std::cout << inputString;
+
+	std::string	outputString;
+	outputString = replaceString(inputString, s1, s2);
 	//create textForNewFile as `filename.replace` and put textFromFilename into it.
 	std::string		outputFilename = filename + ".replace";
 	std::ofstream	outputFile(outputFilename.c_str());
-	outputFile << inputString;
+	std::cout << outputString;
+	outputFile << outputString;
 	
 	return (0);
 }
